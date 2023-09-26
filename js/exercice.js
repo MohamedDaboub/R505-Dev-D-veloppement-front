@@ -129,6 +129,12 @@ console.log("Nike");
 //         console.log(chaussures[i]);
 //     }
 // }
+let nikes = chaussures.filter(chaussures => {
+    return chaussures.marque === "Nike";
+});
+let nikes1 = chaussures.filter(({marque}) => marque === "Nike");
+console.log(nikes);
+
 chaussures.find(chaussures => {
     if (chaussures.marque == "Nike") {
         console.log(chaussures);
@@ -141,6 +147,8 @@ console.log("Prix de la Vans Old Skool");
 //         console.log(chaussures[i].prix);
 //     }
 // }
+chaussures.filter(({marque,titre}) => (marque === "Vans" && titre === "Old Skool")).forEach(({prix}) => console.log({prix}))
+
 chaussures.find(chaussures => {
     if (chaussures.titre == "Old Skool") {
         console.log(chaussures.prix);
@@ -153,6 +161,10 @@ console.log("Toutes les chaussures collector");
 //         console.log(chaussures[i]);
 //     }
 // }
+
+let nikes2 = chaussures.filter(({collector}) => collector);
+console.log(nikes2);
+
 let tableau = [];
 chaussures.find(chaussures => {
     if (chaussures.collector == true) {
@@ -166,7 +178,6 @@ console.log("Couleur lacets de la vans Sk8");
 //     if (chaussures[i].titre == "Sk8"){
 //         console.log(chaussures[i].elements.lacets);
 //     }
-// }  
 chaussures.find(chaussures => {
     if (chaussures.titre == "Sk8") {
         console.log(chaussures.elements.lacets);
@@ -180,6 +191,10 @@ console.log("Changement de couleur de la vans Sk8");
 //         console.log(chaussures[i]);
 //     }
 // } 
+let index = chaussures.findIndex(({titre}) => titre === "Sk8");
+chaussures[index].elements.lacets = "violet";
+console.log(chaussures[index]);
+
 chaussures.forEach(chaussures => {
     if (chaussures.titre == "Sk8") {
         chaussures.elements.lacets = "violet";
@@ -191,7 +206,7 @@ console.log("Montant total de toutes les Nike");
 
 // for (let i=0; i< chaussures.length; i++){
 //     if (chaussures[i].marque == "Nike"){
-//         montant_Total += chaussures[i].prix;
+//         montant_Total  chaussures[i].prix;
 //     }
 // }
 // chaussures.forEach(chaussures => {

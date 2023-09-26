@@ -70,3 +70,4 @@ function checklavieillesse(age){
     }
 }
 checklavieillesse(5);
+
