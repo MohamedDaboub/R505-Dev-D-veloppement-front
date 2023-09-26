@@ -153,11 +153,13 @@ console.log("Toutes les chaussures collector");
 //         console.log(chaussures[i]);
 //     }
 // }
+let tableau = [];
 chaussures.find(chaussures => {
     if (chaussures.collector == true) {
-        console.log(chaussures);
+        tableau.push(chaussures);
     }
 });
+console.log(tableau);
 // 5. Log couleur lacets de la vans Sk8
 console.log("Couleur lacets de la vans Sk8");
 // for (let i=0; i< chaussures.length; i++){
@@ -186,15 +188,23 @@ chaussures.forEach(chaussures => {
 });
 // 7. Plus compliqué : Log le montant total de Toutes les Nike
 console.log("Montant total de toutes les Nike");
-let montant_Total = 0;
+
 // for (let i=0; i< chaussures.length; i++){
 //     if (chaussures[i].marque == "Nike"){
 //         montant_Total += chaussures[i].prix;
 //     }
 // }
-chaussures.forEach(chaussures => {
-    if (chaussures.marque == "Nike") {
-        montant_Total += chaussures.prix;
+// chaussures.forEach(chaussures => {
+//     if (chaussures.marque == "Nike") {
+//         montant_Total += chaussures.prix;
+//     }
+// });
+
+const montant_Total = chaussures.reduce((acc, chaussure) => {
+    if (chaussure.marque == "Nike") {
+        return acc + chaussure.prix;
     }
-});
+    return acc;
+}, 0);
+
 console.log(`Le montant Total de Tous les chaussers Nike est`,montant_Total);
