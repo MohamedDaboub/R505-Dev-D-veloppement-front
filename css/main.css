@@ -1,0 +1,27 @@
+.e-button {
+  background-color: red;
+  color: #fff;
+  padding: 15px;
+  border-radius: 0.25rem;
+  border: 1px solid red;
+}
+.e-button span {
+  font-size: 1.2rem;
+  color: #fff;
+}
+.e-button:hover {
+  background-color: #aaa;
+  color: red;
+}
+
+h1 {
+  color: red;
+}
+
+p {
+  color: red;
+}
+
+ul li {
+  color: red;
+}/*# sourceMappingURL=main.css.map */

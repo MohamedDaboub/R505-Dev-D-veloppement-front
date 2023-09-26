@@ -1,0 +1,17 @@
+.e-button{
+    background-color: $main-color;
+    color: #fff;
+    padding: 15px;
+    border-radius: 0.25rem;
+    border: 1px solid $main-color;
+
+    span{
+        font-size: 1.2rem;
+        color: #fff;
+    }
+
+    &:hover{
+        background-color: $subtle-color;
+        color: $main-color;
+    }
+} 
