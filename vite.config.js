@@ -25,7 +25,10 @@ export default defineConfig({
       // `scss` syntax requires an semicolon at the end of a statement, while `sass` syntax requires none
       // in that case, we can target the `scss` syntax separately using the `scss` option
       scss: {
-        additionalData: `@import "@/scss/foundations/variables.scss";`
+        additionalData: `
+        @import "@/scss/foundations/variables.scss";
+        @import "@/scss/foundations/_mixins.scss";
+        `
       },
       // pass Less.js Options to less-loader
     }
